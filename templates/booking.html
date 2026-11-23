@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{% block content %}
+<section class="booking">
+    <h1>Book Your Appointment 💗</h1>
+    <p>Choose your beauty service and preferred date.</p>
+
+    <form method="POST">
+        <label>Your Makeup Service</label>
+        <select name="service" required>
+            <option value="">Select Service</option>
+            <option>Bridal Makeup</option>
+            <option>Party Makeup</option>
+            <option>Engagement Makeup</option>
+            <option>Basic Makeup</option>
+        </select>
+
+        <label>Appointment Date</label>
+        <input type="date" name="booking_date" required>
+
+        <label>Appointment Time</label>
+        <input type="time" name="booking_time" required>
+
+        <label>Additional Notes</label>
+        <textarea name="notes"></textarea>
+
+        <button type="submit">Book Now 💕</button>
+    </form>
+</section>
+{% endblock %}
